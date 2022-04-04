@@ -7,22 +7,25 @@
     <title>Pais</title>
 </head>    
 <body>
-    <h1>Vivendo em um País</h1>
-    <p><strong>Digite o País: </strong><input type="text" name="txtp" id="txtp"></p>
-    <input type="button" value="Verificar" onclick="analisar()">
-    <div id='res'>
-
+    <div id="corpo">
+        <h1>Vivendo em um País</h1>
+        <p><strong>Digite o País: </strong><input type="text" name="txtp" id="txtp"></p>
+        <input type="button" value="Verificar" id="verificar" onclick="analisar()">
+        <div id="res">
+    
+        </div>
     </div>
     <script>
         function analisar() {
             var pais = window.document.querySelector('input#txtp')
             var res = window.document.querySelector('div#res')
-            res.innerHTML = `Você mora em ${pais}` 
-            if (pais != 'brasil') {
-                res.innerHTML += `Você é Estrangeiro`
-            } else {
-                res.innerHTML += `Você é Brasileiro`
-            }
+            var country = String(pais.value)
+                res.innerHTML = `<p>Você mora em ${country} </p>` 
+                    if (country != 'brasil') {
+                        res.innerHTML += `Você é Estrangeiro`
+                    } else {
+                        res.innerHTML += `Você é Brasileiro`
+                }
 
         }
         

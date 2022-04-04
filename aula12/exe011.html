@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale-0.1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Votação</title>
+</head>    
+<body>
+    <h1>Votação</h1>
+    <p>Idade do eleitor: <input type="number" name="txtid" id="txtid"></p>
+    <input type="button" value="Verificar" id="verificar" onclick="analisar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function analisar() {
+            var idade = document.querySelector("input#txtid")
+            var res = document.querySelector("div#res")
+            var eleitor = Number(idade.value)
+            res.innerHTML = `<p>Você tem ${eleitor} anos. </p>`
+
+            if (eleitor < 16) {
+                res.innerHTML += `Não vota` 
+            } else if (eleitor < 18 || eleitor > 65) {
+                res.innerHTML += `Voto opicional`
+            } else if (eleitor >= 18) {
+                res.innerHTML += `Voto obrigatório`
+            }
+        }
+       
+        
+    </script>
+</body>
+</html>

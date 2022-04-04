@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale-0.1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Horas</title>
+</head>  
+<body>
+    <h1>Horarios</h1>
+    <p><input type="button" value="Que horas são?" id="verificar" onclick="analisar()"></p>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function analisar() {
+            var agora = document.querySelector("div#res")
+            var hoje = new Date()
+            var hora = hoje.getHours()
+            res.innerHTML = `Agora são ${hora} horas `
+            
+            if (hora < 6) {
+                res.innerHTML += `Boa madrugada`
+            } else if (hora < 12) {
+                res.innerHTML += `Bom dia`
+            } else if (hora < 18) {
+                res.innerHTML += `Boa tarde`
+            } else {
+                res.innerHTML += `Boa noite`
+            }
+        }
+    </script>
+</body>  
+</html>

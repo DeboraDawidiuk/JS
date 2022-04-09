@@ -1,4 +1,10 @@
-let username = 'per"
+let username = " per"
 
-console.log(username)
 
+let message = "You have tree new notifications"
+console.log(message + username)
+
+
+let messsageToUser = message + "," + username + "!"
+
+console.log(messsageToUser)

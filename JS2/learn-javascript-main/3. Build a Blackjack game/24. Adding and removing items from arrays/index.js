@@ -10,7 +10,19 @@ let messages = [
     "All good. Been working on my portfolio lately."
 ]
 
+
+
 let newMessage = "Same here!"
+
+messages.push(newMessage)
+
+console.log(messages)
+
+messages.pop()
+
+console.log(messages)
+
+
 
 
 
